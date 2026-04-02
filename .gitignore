@@ -41,6 +41,16 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+# --- Fichiers de cache liés à la solution ---
+# Visual Studio crée parfois des fichiers temporaires à côté du .sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
+# --- Configuration sensible ---
+# On garde appsettings.json (modèle) mais on ignore les versions avec secrets
+appsettings.Development.json
+appsettings.Local.json
 ## --- TESTS ---
 TestResults/

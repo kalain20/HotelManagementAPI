@@ -1,0 +1,30 @@
+## .NET Core / ASP.NET Core
+#
+# Ignorer les répertoires de build et de dépendances
+bin/
+obj/
+#
+# Ignorer les fichiers de configuration de l'utilisateur (VS / VS Code)
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+#
+# Ignorer les secrets de développement et fichiers de configuration locaux
+appsettings.Development.json
+#
+# Ignorer les journaux et fichiers temporaires
+*.log
+*.tmp
+*.temp
+#
+# Ignorer les fichiers de packages (NuGet)
+packages/
+*.nupkg
+#
+# Ignorer les dossiers de publication
+publish/
+#
+# Ignorer les dossiers node_modules (si frontend JS/TS)
+node_modules/

@@ -1,30 +1,46 @@
-## .NET Core / ASP.NET Core
-#
-# Ignorer les répertoires de build et de dépendances
-bin/
-obj/
-#
-# Ignorer les fichiers de configuration de l'utilisateur (VS / VS Code)
+## --- ARTEFACTS DE COMPILATION ---
+[Bb]in/
+[Oo]bj/
+# Fichiers de publication
+publish/
+
+## --- ÉDITEURS ET IDE ---
+# Visual Studio
 .vs/
-.vscode/
 *.user
 *.userosscache
 *.sln.docstates
-#
-# Ignorer les secrets de développement et fichiers de configuration locaux
+
+# VS Code
+.vscode/
+# (On ignore tout dans .vscode sauf les configs de lancement si besoin)
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+## --- CONFIGURATION ET SECRETS ---
+# Fichiers de settings locaux (souvent utilisés pour les clés d'API de test)
 appsettings.Development.json
-#
-# Ignorer les journaux et fichiers temporaires
-*.log
-*.tmp
-*.temp
-#
-# Ignorer les fichiers de packages (NuGet)
-packages/
+appsettings.Local.json
+
+# Fichiers de secrets utilisateur .NET
+# (Normalement stockés hors du projet, mais par précaution :)
+secrets.json
+
+## --- PACKAGES ET DÉPENDANCES ---
 *.nupkg
-#
-# Ignorer les dossiers de publication
-publish/
-#
-# Ignorer les dossiers node_modules (si frontend JS/TS)
+# Dossier de packages NuGet (ancien format)
+packages/
+# Si vous avez un client Web intégré
 node_modules/
+
+## --- SYSTÈME ET LOGS ---
+*.log
+.DS_Store
+Thumbs.db
+
+## --- TESTS ---
+TestResults/
